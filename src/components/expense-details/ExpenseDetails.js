@@ -1,3 +1,5 @@
+import ExpenseAmount from "./amount/ExpenseAmount";
+
 function ExpenseDetails(props) {
 
     return (
@@ -11,10 +13,10 @@ function ExpenseDetails(props) {
             </div >
 
             {/* Expense title */}
-            < div className='title' > {props.title}</div >
+
 
             {/* Expense amount */}
-            < div className='amount' > {props.amount}</div >
+            <ExpenseAmount />
             <button>Button</button>
         </div>
     )
