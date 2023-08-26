@@ -7,7 +7,6 @@ import ExpenseDetails from './components/expense-details/ExpenseDetails';
 
 function App() {
 
-
   const expenses = [
     { title: 'Car Insurance', amount: 295.45, date: new Date() },
     { title: 'Medical', amount: 495.45, date: new Date() },
