@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import ExpenseDetails from './components/expense-details/ExpenseDetails';
+import NewExpense from './components/new-expense/NewExpense';
 
 function App() {
 
@@ -19,12 +20,21 @@ function App() {
   ];
 
   return (
-    <div className='App'>
+    <div className='container App'>
       <h1>Expense Tracker</h1>
+      {/* New Expense */}
+      <NewExpense />
+
+      {/* Expense Details */}
       <ExpenseDetails
         date={expenses[0].date}
         title={expenses[0].title}
         amount={expenses[0].amount}
+      />
+      <ExpenseDetails
+        date={expenses[1].date}
+        title={expenses[1].title}
+        amount={expenses[1].amount}
       />
     </div>
 

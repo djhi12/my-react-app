@@ -1,0 +1,14 @@
+.card {
+    margin-bottom: 3% !important;
+    width: 60% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.card__sub-form {
+    margin: 3% !important;
+}
+
+.form-group {
+    margin-top: 2% !important;
+}
