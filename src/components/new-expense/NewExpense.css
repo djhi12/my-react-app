@@ -1,4 +1,5 @@
 .card {
+    margin-top: 5% !important;
     margin-bottom: 3% !important;
     width: 60% !important;
     margin-left: auto !important;
@@ -11,4 +12,8 @@
 
 .form-group {
     margin-top: 2% !important;
+}
+
+.card__text {
+    text-align: center !important;
 }

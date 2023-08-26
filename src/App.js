@@ -21,7 +21,9 @@ function App() {
 
   return (
     <div className='container App'>
-      <h1>Expense Tracker</h1>
+      <div className='container__text'>
+        <h1>Expense Tracker</h1>
+      </div>
       {/* New Expense */}
       <NewExpense />
 
