@@ -21,9 +21,9 @@ function App() {
 
   return (
     <div className='container App'>
-      <div className='container__header-box'>
+      {/* <div className='container__header-box'>
         <h1 className='container__header'>Expense Tracker</h1>
-      </div>
+      </div> */}
 
       {/* New Expense */}
       <div className='container__new-expense'>

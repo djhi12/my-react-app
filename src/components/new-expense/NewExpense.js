@@ -25,21 +25,21 @@ function NewExpense() {
             </div>
             <div className='card__sub-form'>
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">{enteredTitle}</label>
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Title:</label>
                     <div class="col-sm-10">
                         <input type="email" class="form-control" id="inputTitle" placeholder="Type here..." onChange={titleChanged} />
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputAmount" class="col-sm-2 col-form-label">{enteredAmount}</label>
+                    <label for="inputAmount" class="col-sm-2 col-form-label">Amount:</label>
                     <div class="col-sm-10">
                         <input type="number" class="form-control" id="inputAmount" placeholder="Type here..." onChange={amountChanged} />
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputDate" class="col-sm-2 col-form-label">{enteredDate}</label>
+                    <label for="inputDate" class="col-sm-2 col-form-label">Date:</label>
                     <div className="col-sm-10">
                         <input type="date" className="form-control" id="inputDate" placeholder="Type here..." onChange={dateChanged} />
                     </div>
