@@ -10,21 +10,21 @@ function NewExpense() {
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputTitle" placeholder="Title" />
+                        <input type="email" class="form-control" id="inputTitle" placeholder="Type here..." />
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Amount</label>
+                    <label for="inputAmount" class="col-sm-2 col-form-label">Amount</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="inputAmount" placeholder="Amount" />
+                        <input type="number" class="form-control" id="inputAmount" placeholder="Type here..." />
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
                     <div className="col-sm-10">
-                        <input type="date" className="form-control" id="inputDate" />
+                        <input type="date" className="form-control" id="inputDate" placeholder="Type here..." />
                     </div>
                 </div>
 

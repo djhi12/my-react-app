@@ -17,3 +17,19 @@
 .card__text {
     text-align: center !important;
 }
+
+/** Placeholder **/
+::-webkit-input-placeholder { /* Edge */
+    font-style: italic !important;
+    font-size: 90% !important;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+    font-style: italic !important;
+    font-size: 90% !important;
+  }
+  
+  ::placeholder {
+    font-style: italic !important;
+    font-size: 90% !important;
+  }
