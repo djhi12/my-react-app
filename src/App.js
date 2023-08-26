@@ -24,15 +24,20 @@ function App() {
       <div className='container__text'>
         <h1>Expense Tracker</h1>
       </div>
+
       {/* New Expense */}
-      <NewExpense />
+      <div className='container__new-expense'>
+        <NewExpense />
+      </div>
 
       {/* Expense Details */}
-      <ExpenseDetails
-        date={expenses[0].date}
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-      />
+      <div className='container__expense-details'>
+        <ExpenseDetails
+          date={expenses[0].date}
+          title={expenses[0].title}
+          amount={expenses[0].amount}
+        />
+      </div>
       <ExpenseDetails
         date={expenses[1].date}
         title={expenses[1].title}
