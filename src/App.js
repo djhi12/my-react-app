@@ -1,15 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-// import './App.css';
-// import ExpenseItem from './components/ExpenseItem';
-// import Expenses from './components/Expenses';
+import './App.css';
 import ExpenseDetails from './components/expense-details/ExpenseDetails';
 
 function App() {
 
+  const date = new Date(7, 15, 2023);
+
+  const staticDate = {
+    month: date.toLocaleString('default', { month: 'long' }),
+    day: date.getDate(),
+    year: date.getFullYear(),
+  }
+
   const expenses = [
-    { title: 'Car Insurance', amount: 295.45, date: new Date() },
-    { title: 'Medical', amount: 495.45, date: new Date() },
+    { title: 'Car Insurance', amount: 295.45, date: staticDate },
+    { title: 'Medical', amount: 495.45, date: staticDate },
   ];
 
   return (
