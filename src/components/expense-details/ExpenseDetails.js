@@ -13,7 +13,7 @@ function ExpenseDetails(props) {
     };
 
     return (
-        <div className='expense-details d-flex justify-content-around'>
+        <div className='expense-details d-flex justify-content-around align-items-center'>
             {/* Expense Date */}
             <div className='date expense-details__info'>
                 <div>{props.date.month}</div>
@@ -26,7 +26,7 @@ function ExpenseDetails(props) {
 
             {/* Expense amount */}
             <div className='amount expense-details__info' expense-details__info>{props.amount}</div>
-            <button className="expense-details__info" onClick={handleEditTitle}>Edit Title</button>
+            <button type="button" className=" btn btn-outline-success expense-details__info" onClick={handleEditTitle}>Edit Title</button>
         </div>
     );
 }

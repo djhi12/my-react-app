@@ -15,10 +15,20 @@
     margin-top: 2% !important;
 }
 
-.card__text {
+.card__header-box {
     text-align: center !important;
+    background: linear-gradient(#20e3a8, #202ae3) !important;
+    color: white !important;
 }
 
+.card__header {
+    padding: 2% !important;
+}
+
+/** Button **/
+/* .btn {
+    background: linear-gradient(#20e3a8, #202ae3) !important;
+} */
 /** Placeholder **/
 ::-webkit-input-placeholder { /* Edge */
     font-style: italic !important;

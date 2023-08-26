@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className='container App'>
-      <div className='container__text'>
-        <h1>Expense Tracker</h1>
+      <div className='container__header-box'>
+        <h1 className='container__header'>Expense Tracker</h1>
       </div>
 
       {/* New Expense */}
@@ -38,12 +38,14 @@ function App() {
           amount={expenses[0].amount}
         />
       </div>
-      <ExpenseDetails
-        date={expenses[1].date}
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-      />
-    </div>
+      <div className='container__expense-details'>
+        <ExpenseDetails
+          date={expenses[1].date}
+          title={expenses[1].title}
+          amount={expenses[1].amount}
+        />
+      </div>
+    </div >
 
   );
 }

@@ -3,10 +3,10 @@ function NewExpense() {
 
     return (
         <form className="card">
+            <div className='card__header-box'>
+                <h4 className='card__header'>New Expense</h4>
+            </div>
             <div className='card__sub-form'>
-                <div className='card__text'>
-                    <h4>New Expense</h4>
-                </div>
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
