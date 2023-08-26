@@ -4,9 +4,9 @@
   /* background: linear-gradient(red, yellow) !important; */
 }
 
-/* .container__header {
- padding: 10% !important;
-} */
+.container__header {
+ margin-top: 3% !important;
+}
 
 /** Expense Details **/
 .container__expense-details {
