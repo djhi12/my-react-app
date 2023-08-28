@@ -4,6 +4,7 @@ import './App.css';
 import ExpenseDetails from './components/expense-details/ExpenseDetails';
 // import NewExpense from './components/new-expense/NewExpense';
 import NewExpense from './components/new-expense/NewExpense';
+import ExpensesFilter from './components/expense-details/ExpenseFilter';
 
 function App() {
 
@@ -22,14 +23,14 @@ function App() {
 
   return (
     <div className='container App'>
-      {/* <div className='container__header-box'>
-        <h1 className='container__header'>Expense Tracker</h1>
-      </div> */}
 
       {/* New Expense */}
       <div className='container__new-expense'>
         <NewExpense />
       </div>
+
+      {/* Expense Filter */}
+      <ExpensesFilter />
 
       {/* Expense Details */}
       <div className='container__expense-details'>
