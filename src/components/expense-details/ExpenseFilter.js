@@ -7,8 +7,7 @@ function ExpensesFilter() {
     };
 
     return (
-        <div>
-            <label>Filter by year</label>
+        <div className="filter-year">
             <select className="form-select" onChange={dropdownChangeHadler} aria-label="Default select example">
                 <option selected>Filter year</option>
                 <option value="2022">One</option>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../expense-details/ExpenseDetails.css';
+// import ExpensesFilter from "./ExpenseFilter";
 
 function ExpenseDetails(props) {
     const [title, setTitle] = useState(props.title);
