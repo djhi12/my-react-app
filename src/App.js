@@ -21,6 +21,12 @@ function App() {
     { id: 'e2', title: 'Medical', amount: 495.45, date: staticDate },
   ];
 
+  // Filter Change
+  const filterChangeHandler = (selectedYear) => {
+    console.log('Success');
+    console.log(selectedYear);
+  };
+
   return (
     <div className='container App'>
 
@@ -31,7 +37,7 @@ function App() {
       </div>
 
       {/* Expense Filter */}
-      <ExpensesFilter />
+      <ExpensesFilter onChangeFilter={filterChangeHandler} />
 
       {/* Expense Details */}
       <div className='container__expense-details'>
