@@ -1,3 +1,4 @@
+import './NewExpense.css';
 import React, { useState } from "react";
 function NewExpense() {
 
