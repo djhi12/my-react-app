@@ -15,8 +15,8 @@ function App() {
   }
 
   const expenses = [
-    { title: 'Car Insurance', amount: 295.45, date: staticDate },
-    { title: 'Medical', amount: 495.45, date: staticDate },
+    { id: 'e1', title: 'Car Insurance', amount: 295.45, date: staticDate },
+    { id: 'e2', title: 'Medical', amount: 495.45, date: staticDate },
   ];
 
   return (

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import '../new-expense/NewExpense.css';
+import React, { useState } from "react";
 function NewExpense() {
 
     const [enteredTitle, setTitle] = useState('');
@@ -32,7 +31,6 @@ function NewExpense() {
         setAmount('');
         setDate('');
     };
-
 
     return (
         <form className="card" onSubmit={submitHandler}>
@@ -67,9 +65,8 @@ function NewExpense() {
                     </div>
                 </div>
             </div>
-        </form>
+        </form >
     );
 }
-
 
 export default NewExpense;

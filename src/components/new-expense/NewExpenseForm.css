@@ -1,0 +1,46 @@
+.card {
+    margin-top: 5% !important;
+    margin-bottom: 3% !important;
+    width: 60% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+}
+
+.card__sub-form {
+    margin: 3% !important;
+}
+
+.form-group {
+    margin-top: 2% !important;
+}
+
+.card__header-box {
+    text-align: center !important;
+    background: linear-gradient(#20e3a8, #202ae3) !important;
+    color: white !important;
+}
+
+.card__header {
+    padding: 2% !important;
+}
+
+/** Button **/
+/* .btn {
+    background: linear-gradient(#20e3a8, #202ae3) !important;
+} */
+/** Placeholder **/
+::-webkit-input-placeholder { /* Edge */
+    font-style: italic !important;
+    font-size: 90% !important;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+    font-style: italic !important;
+    font-size: 90% !important;
+  }
+  
+  ::placeholder {
+    font-style: italic !important;
+    font-size: 90% !important;
+  }
