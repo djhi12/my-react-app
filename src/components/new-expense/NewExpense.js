@@ -18,8 +18,19 @@ function NewExpense() {
         setDate(event.target.value);
     };
 
+    const submitHandler = (event) => {
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        };
+
+        console.log(expenseData);
+    };
+
+
     return (
-        <form className="card">
+        <form className="card" onSubmit={submitHandler}>
             <div className='card__header-box'>
                 <h4 className='card__header'>New Expense</h4>
             </div>
