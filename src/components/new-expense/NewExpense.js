@@ -19,6 +19,8 @@ function NewExpense() {
     };
 
     const submitHandler = (event) => {
+        event.preventDefault();
+
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount,
@@ -35,30 +37,30 @@ function NewExpense() {
                 <h4 className='card__header'>New Expense</h4>
             </div>
             <div className='card__sub-form'>
-                <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Title:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputTitle" placeholder="Type here..." onChange={titleChanged} />
+                <div className="form-group row">
+                    <label htmlFor="inputTitle" className="col-sm-2 col-form-label">Title:</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" id="inputTitle" placeholder="Type here..." onChange={titleChanged} />
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="inputAmount" class="col-sm-2 col-form-label">Amount:</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" id="inputAmount" placeholder="Type here..." onChange={amountChanged} />
+                <div className="form-group row">
+                    <label htmlFor="inputAmount" className="col-sm-2 col-form-label">Amount:</label>
+                    <div className="col-sm-10">
+                        <input type="number" className="form-control" id="inputAmount" placeholder="Type here..." onChange={amountChanged} />
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="inputDate" class="col-sm-2 col-form-label">Date:</label>
+                <div className="form-group row">
+                    <label htmlFor="inputDate" className="col-sm-2 col-form-label">Date:</label>
                     <div className="col-sm-10">
                         <input type="date" className="form-control" id="inputDate" placeholder="Type here..." onChange={dateChanged} />
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                <div className="form-group row">
+                    <div className="col-sm-10">
+                        <button type="submit" className="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </div>

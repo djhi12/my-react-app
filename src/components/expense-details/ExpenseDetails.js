@@ -22,10 +22,10 @@ function ExpenseDetails(props) {
             </div>
 
             {/* Expense title */}
-            <div className='title expense-details__info' expense-details__info>{title}</div>
+            <div className='title expense-details__info' data-expense-details__info>{title}</div>
 
             {/* Expense amount */}
-            <div className='amount expense-details__info' expense-details__info>{props.amount}</div>
+            <div className='amount expense-details__info' data-expense-details__info>{props.amount}</div>
             <button type="button" className=" btn btn-outline-primary expense-details__info" onClick={handleEditTitle}>Edit Title</button>
         </div>
     );
