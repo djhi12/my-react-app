@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import ExpenseDetails from './components/expense-details/ExpenseDetails';
 // import NewExpense from './components/new-expense/NewExpense';
-import NewExpenseForm from './components/new-expense/NewExpenseForm';
+import NewExpense from './components/new-expense/NewExpense';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
 
       {/* New Expense */}
       <div className='container__new-expense'>
-        <NewExpenseForm />
+        <NewExpense />
       </div>
 
       {/* Expense Details */}
