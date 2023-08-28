@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
@@ -22,10 +23,11 @@ function App() {
   ];
 
   // Filter Change
+  const [filteredYear, setFilteredYear] = useState('2020');
   const filterChangeHandler = (selectedYear) => {
-    console.log('Success');
-    console.log(selectedYear);
+    setFilteredYear(selectedYear);
   };
+
 
   return (
     <div className='container App'>
@@ -37,7 +39,7 @@ function App() {
       </div>
 
       {/* Expense Filter */}
-      <ExpensesFilter onChangeFilter={filterChangeHandler} />
+      <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
 
       {/* Expense Details */}
       <div className='container__expense-details'>
