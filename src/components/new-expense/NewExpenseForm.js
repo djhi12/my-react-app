@@ -1,6 +1,6 @@
 /* import React, { useState } from 'react'; */
 /* import '../new-expense/NewExpense.css'; */
-import '../NewExpenseForm.css';
+import '../new-expense/NewExpenseForm.css';
 import NewExpense from "./NewExpense";
 function NewExpenseForm() {
 
