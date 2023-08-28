@@ -24,6 +24,7 @@ function App() {
   return (
     <div className='container App'>
 
+
       {/* New Expense */}
       <div className='container__new-expense'>
         <NewExpense />
