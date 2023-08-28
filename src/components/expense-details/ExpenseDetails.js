@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../expense-details/ExpenseDetails.css';
+// import '../expense-details/ExpenseDetails.css';
 // import ExpensesFilter from "./ExpenseFilter";
 
 function ExpenseDetails(props) {
@@ -15,6 +15,7 @@ function ExpenseDetails(props) {
 
     return (
         <div className='expense-details d-flex justify-content-around align-items-center'>
+            {/* Expense Filter */}
 
             {/* Expense Date */}
             <div className='date expense-details__info'>
