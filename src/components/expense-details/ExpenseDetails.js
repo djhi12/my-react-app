@@ -14,6 +14,7 @@ function ExpenseDetails(props) {
 
     return (
         <div className='expense-details d-flex justify-content-around align-items-center'>
+
             {/* Expense Date */}
             <div className='date expense-details__info'>
                 <div>{props.date.month}</div>
