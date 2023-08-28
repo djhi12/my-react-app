@@ -28,6 +28,9 @@ function NewExpense() {
         };
 
         console.log(expenseData);
+        setTitle('');
+        setAmount('');
+        setDate('');
     };
 
 
@@ -40,21 +43,21 @@ function NewExpense() {
                 <div className="form-group row">
                     <label htmlFor="inputTitle" className="col-sm-2 col-form-label">Title:</label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control" id="inputTitle" placeholder="Type here..." onChange={titleChanged} />
+                        <input type="text" className="form-control" id="inputTitle" placeholder="Type here..." value={enteredTitle} onChange={titleChanged} />
                     </div>
                 </div>
 
                 <div className="form-group row">
                     <label htmlFor="inputAmount" className="col-sm-2 col-form-label">Amount:</label>
                     <div className="col-sm-10">
-                        <input type="number" className="form-control" id="inputAmount" placeholder="Type here..." onChange={amountChanged} />
+                        <input type="number" className="form-control" id="inputAmount" placeholder="Type here..." value={enteredAmount} onChange={amountChanged} />
                     </div>
                 </div>
 
                 <div className="form-group row">
                     <label htmlFor="inputDate" className="col-sm-2 col-form-label">Date:</label>
                     <div className="col-sm-10">
-                        <input type="date" className="form-control" id="inputDate" placeholder="Type here..." onChange={dateChanged} />
+                        <input type="date" className="form-control" id="inputDate" placeholder="Type here..." value={enteredDate} onChange={dateChanged} />
                     </div>
                 </div>
 
