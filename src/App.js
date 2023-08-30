@@ -6,39 +6,52 @@ import ExpenseDetails from './components/expense-details/ExpenseDetails';
 import NewExpense from './components/new-expense/NewExpense';
 import ExpensesFilter from './components/expense-details/ExpenseFilter';
 
-function App() {
-  const date = new Date(2023, 7, 15); // Month is 0-indexed, so August is 7
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
 
-  const staticDate = {
-    month: date.toLocaleString('default', { month: 'long' }),
-    day: date.getDate(),
-    year: date.getFullYear(),
+const staticDate = {
+  month: currentDate.toLocaleString('default', { month: 'long' }),
+  day: currentDate.getDate(),
+  year: currentDate.getFullYear(),
+};
+
+const initialExpenses = [
+  { id: 'e1', title: 'Car Insurance', amount: 295.45, date: staticDate },
+  { id: 'e2', title: 'Medical', amount: 495.45, date: staticDate },
+];
+
+function App() {
+  const [expenseItems, setExpenseItems] = useState(initialExpenses);
+
+  const addExpenseHandler = (expense) => {
+    setExpenseItems((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
-  const expenses = [
-    { id: 'e1', title: 'Car Insurance', amount: 295.45, date: staticDate },
-    { id: 'e2', title: 'Medical', amount: 495.45, date: staticDate },
-  ];
+  const [filteredYear, setFilteredYear] = useState(currentYear);
 
-  // Filter Change
-  const [filteredYear, setFilteredYear] = useState('2020');
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
 
+  const filteredExpenses = expenseItems.filter(
+    (expense) => expense.date.year === filteredYear
+  );
+
   return (
     <div className='container App'>
-      {/* New Expense */}
       <div className='container__new-expense'>
-        <NewExpense />
+        <NewExpense onAddExpense={addExpenseHandler} />
       </div>
 
-      {/* Expense Filter */}
-      <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+      <ExpensesFilter
+        selected={filteredYear}
+        onChangeFilter={filterChangeHandler}
+      />
 
-      {/* Expense Details */}
       <div className='container__expense-details'>
-        {expenses.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseDetails
             key={expense.id}
             title={expense.title}
