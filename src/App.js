@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
+import ExpenseDetails from './components/expense-details/ExpenseDetails';
 import NewExpense from './components/new-expense/NewExpense';
 import ExpensesFilter from './components/expense-details/ExpenseFilter';
-import Expenses from './components/expense-details/Expenses';
 
 function App() {
-  const date = new Date(2023, 6, 15); // Note: Months are zero-based, so 6 represents July.
+  const date = new Date(2023, 7, 15); // Month is 0-indexed, so August is 7
 
   const staticDate = {
     month: date.toLocaleString('default', { month: 'long' }),
@@ -20,6 +20,7 @@ function App() {
     { id: 'e2', title: 'Medical', amount: 495.45, date: staticDate },
   ];
 
+  // Filter Change
   const [filteredYear, setFilteredYear] = useState('2020');
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
@@ -27,11 +28,25 @@ function App() {
 
   return (
     <div className='container App'>
+      {/* New Expense */}
       <div className='container__new-expense'>
-        <NewExpense expenses={expenses} /> {/* Pass expenses as props */}
+        <NewExpense />
       </div>
+
+      {/* Expense Filter */}
       <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-      <Expenses items={expenses} /> {/* Pass expenses as items */}
+
+      {/* Expense Details */}
+      <div className='container__expense-details'>
+        {expenses.map((expense) => (
+          <ExpenseDetails
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
+      </div>
     </div>
   );
 }
